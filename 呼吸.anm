@@ -1,0 +1,14 @@
+                                                                                                                                                  
+--track0:移動距離,0,50,4,0.01
+ 
+--track1:拡大率,0,300.00,99,0.01
+ 
+--track2:間隔,0,200.0,45,0.01
+ 
+--track3:同期ズレ,0,360,0,0.01
+ 
+ 
+obj.oy      = obj.oy + obj.track0  * (1 +  -math.cos(2 * math.pi/obj.track2 * obj.frame /2))
+local scale = 100    + (obj.track1-100)  * -math.cos(2 * math.pi/obj.track2 * obj.frame /2 +math.rad(obj.track3))
+ 
+obj.effect("拡大率","X",scale)
