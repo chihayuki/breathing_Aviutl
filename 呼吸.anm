@@ -1,16 +1,16 @@
-
---track0:ˆÚ“®‹——£,0,50,4,0.01
-
---track1:Šg‘å—¦,0,300.00,99,0.01
-
---track2:ŠÔŠu,0,200.0,45,0.01
-
---track3:“¯ŠúƒYƒŒ,0,360,0,0.01
-
-
+                                                                                                                                                  
+--track0:????,0,50,4,0.01
+ 
+--track1:???,98,102.00,99,0.01
+ 
+--track2:??,0,200.0,45,0.01
+ 
+--track3:????,0,360,0,0.01
+ 
+ 
+obj.cx=0
 obj.oy      = obj.oy + obj.track0  * (1 +  -math.cos(2 * math.pi/obj.track2 * obj.frame /2))
 local scale = 100    + (obj.track1-100)  * -math.cos(2 * math.pi/obj.track2 * obj.frame /2 +math.rad(obj.track3))
-
-obj.effect("Šg‘å—¦","X",scale)
-
+obj.effect("????","?",math.max(0,-obj.x*2),"?",math.max(0,obj.x*2))
+obj.effect("????","X",scale)
 
