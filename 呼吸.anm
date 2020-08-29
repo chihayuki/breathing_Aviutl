@@ -1,16 +1,23 @@
-                                                                                                                                                  
---track0:ˆÚ“®‹——£,0,50,4,0.01
+--track0:ç§»å‹•è·é›¢,0,50,4,0.01
  
---track1:Šg‘å—¦,90,110.00,99,0.01
+--track1:æ‹¡å¤§ç‡,90,110.00,99,0.01
  
---track2:ŠÔŠu,0,200.0,45,0.01
+--track2:é–“éš”,0,200.0,45,0.01
  
---track3:“¯ŠúƒYƒŒ,0,360,0,0.01
+--track3:åŒæœŸã‚ºãƒ¬,0,360,0,0.01
  
- 
-obj.cx=0
-obj.oy      = obj.oy + obj.track0  * (1 +  -math.cos(2 * math.pi/obj.track2 * obj.frame /2))
-local scale = 100    + (obj.track1-100)  * -math.cos(2 * math.pi/obj.track2 * obj.frame /2 +math.rad(obj.track3))
-obj.effect("—ÌˆæŠg’£","‰E",math.max(0,-obj.x*2),"¶",math.max(0,obj.x*2))
-obj.effect("ƒŠƒTƒCƒY","X",scale)
+--check0:xåº§æ¨™è£œæ­£
 
+--ã‚°ãƒ«ãƒ¼ãƒ—åˆ¶å¾¡ç‰ˆ
+if check0 then
+    obj.cx=0
+    obj.oy      = obj.oy + obj.track0  * (1 +  -math.cos(2 * math.pi/obj.track2 * obj.frame /2))
+    local scale = 100    + (obj.track1-100)  * -math.cos(2 * math.pi/obj.track2 * obj.frame /2 +math.rad(obj.track3))
+    obj.effect("é ˜åŸŸæ‹¡å¼µ","å³",math.max(0,-obj.x*2),"å·¦",math.max(0,obj.x*2))
+    obj.effect("ãƒªã‚µã‚¤ã‚º","X",scale)
+else
+--ä¸€æšçµµ
+    obj.oy      = obj.oy + obj.track0  * (1 +  -math.cos(2 * math.pi/obj.track2 * obj.frame /2))
+    local scale = 100    + (obj.track1-100)  * -math.cos(2 * math.pi/obj.track2 * obj.frame /2 +math.rad(obj.track3))
+    obj.effect("æ‹¡å¤§ç‡","X",scale)
+end
