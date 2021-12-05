@@ -9,7 +9,7 @@
 --check0:x座標補正
 
 --グループ制御版
-if check0 then
+if obj.check0 then
     obj.cx=0
     obj.oy      = obj.oy + obj.track0  * (1 +  -math.cos(2 * math.pi/obj.track2 * obj.frame /2))
     local scale = 100    + (obj.track1-100)  * -math.cos(2 * math.pi/obj.track2 * obj.frame /2 +math.rad(obj.track3))
